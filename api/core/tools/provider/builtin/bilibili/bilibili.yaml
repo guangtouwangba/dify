@@ -1,0 +1,15 @@
+identity:
+  author: Aqiu
+  name: bilibili
+  label:
+      en_US: Bilibili
+      zh_Hans: Bilibili
+      pt_BR: Bilibili
+  description:
+      en_US: Bilibili video
+      zh_Hans: Bilibili 视频
+      pt_BR: Bilibili video
+  icon: icon.png
+  tags:
+    - videos
+credentials_for_provider:
