@@ -1,0 +1,38 @@
+identity:
+  name: youtube_summary
+  author: Your Name
+  label:
+    en_US: YouTube Video Summary
+    zh_Hans: YouTube 视频摘要
+
+description:
+  human:
+    en_US: A tool for summarizing YouTube video content. You can choose to get an overall summary or a segmented summary. Input should be the YouTube video ID.
+    zh_Hans: 一个用于总结 YouTube 视频内容的工具。您可以选择获取整体摘要或分段摘要。输入应为 YouTube 视频 ID。
+  llm: A tool for summarizing YouTube video content. It can provide either an overall summary or a segmented summary based on user preference. Input should be the YouTube video ID.
+
+parameters:
+  - name: video_id
+    type: string
+    required: true
+    label:
+      en_US: YouTube Video ID
+      zh_Hans: YouTube 视频 ID
+    human_description:
+      en_US: Enter the ID of the YouTube video you want to summarize. The video ID is the part after "v=" in the YouTube URL.
+      zh_Hans: 输入您想要总结的 YouTube 视频的 ID。视频 ID 是 YouTube 链接中 "v=" 后面的部分。
+    llm_description: Enter the ID of the YouTube video you want to summarize. The video ID is the part after "v=" in the YouTube URL.
+    form: llm
+
+  - name: segment_summary
+    type: boolean
+    required: false
+    default: false
+    label:
+      en_US: Segmented Summary
+      zh_Hans: 分段摘要
+    human_description:
+      en_US: Choose whether you want a segmented summary of the video. If set to true, the tool will provide summaries for different segments of the video in addition to an overall summary.
+      zh_Hans: 选择是否需要视频的分段摘要。如果设置为是，工具将提供视频不同片段的摘要，以及一个整体摘要。
+    llm_description: Boolean flag to determine if a segmented summary should be generated. If true, the tool will provide summaries for different segments of the video in addition to an overall summary.
+    form: llm
